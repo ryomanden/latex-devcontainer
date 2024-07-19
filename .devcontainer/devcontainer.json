@@ -5,32 +5,25 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "workspaceFolder": "/workspace", 
+  "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "James-Yu.latex-workshop",
-        "tomoki1207.pdf"
-      ],
+      "extensions": ["James-Yu.latex-workshop", "tomoki1207.pdf"],
       "settings": {
         "latex-workshop.latex.tools": [
-            {
-                "name": "latexmk",
-                "command": "latexmk",
-                "args": [
-                    "%DOC%"
-                ],
-                "env": {}
-            }
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": ["%DOC%"],
+            "env": {}
+          }
         ],
         "latex-workshop.latex.recipes": [
-            {
-                "name": "default",
-                "tools": [
-                    "latexmk"
-                ]
-            }
+          {
+            "name": "default",
+            "tools": ["latexmk"]
+          }
         ]
       }
     }
